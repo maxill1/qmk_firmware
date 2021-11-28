@@ -30,4 +30,4 @@ BOARDS = [
     'marvo/kg938']
 
 for kb in BOARDS:
-    subprocess.run(f"bin/qmk compile -kb {kb} -km all -j{os.cpu_count()}", shell=True)
+    subprocess.run(f"qmk compile -kb {kb} -km all -j{os.cpu_count()}", shell=True)

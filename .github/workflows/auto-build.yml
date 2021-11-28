@@ -16,7 +16,7 @@ jobs:
   Build:
     runs-on: ubuntu-latest
 
-    container: jath03/sonix_base_container
+    container: qmkfm/qmk_cli
 
     steps:
     - uses: actions/checkout@v2
