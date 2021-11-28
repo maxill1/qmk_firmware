@@ -5,10 +5,12 @@ on:
     branches:
     - sn32
     - sn32_openrgb
+    - sn32_rebase_master
   pull_request:
     branches:
     - sn32
     - sn32_openrgb
+    - sn32_rebase_master
 
 jobs:
   Build:
