@@ -59,6 +59,8 @@
 //rgb effects/* Disable RGB lighting when PC is in suspend */
 #define RGB_DISABLE_WHEN_USB_SUSPENDED
 
+#define RGB_MATRIX_FRAMEBUFFER_EFFECTS
+
 // RGB Matrix Animation modes. Explicitly enabled
 // For full list of effects, see:
 // https://docs.qmk.fm/#/feature_rgb_matrix?id=rgb-matrix-effects
@@ -92,8 +94,8 @@
 // #define ENABLE_RGB_MATRIX_PIXEL_FLOW
 // #define ENABLE_RGB_MATRIX_PIXEL_FRACTAL
 // enabled only if RGB_MATRIX_FRAMEBUFFER_EFFECTS is defined
-//#define ENABLE_RGB_MATRIX_TYPING_HEATMAP
-//#define ENABLE_RGB_MATRIX_DIGITAL_RAIN
+#define ENABLE_RGB_MATRIX_TYPING_HEATMAP
+#define ENABLE_RGB_MATRIX_DIGITAL_RAIN
 // enabled only of RGB_MATRIX_KEYPRESSES or RGB_MATRIX_KEYRELEASES is defined
 //#define ENABLE_RGB_MATRIX_SOLID_REACTIVE_SIMPLE
 //#define ENABLE_RGB_MATRIX_SOLID_REACTIVE
