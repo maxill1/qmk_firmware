@@ -37,9 +37,14 @@
     C10, C11, C12, \
     B6,  B7,  B8, \
     B9,  B10, B11, \
-    D4,  B15, D3, \
-    D5,  A15, D6 \
+    NO_PIN,  NO_PIN,  NO_PIN, \
+    NO_PIN,  NO_PIN,  NO_PIN, \
    }
+/*
+    REMOVED row 7 and 8 because A15 breaks red on row 2 (C7) \
+    D4,  B15, D3, \
+    D5,  A15, D6  \
+*/
 
 // note the underglow is mapped partially on row 7 and row 7
 // in keyboard.json i had to map MATRIX_ROW_PINS adding 2 ending 0 in array to be able to use 8 rows =>  "rows": [ "C15", "D11", "D10", "D9",  "D8", "D7", "NO_PIN", "NO_PIN" ]

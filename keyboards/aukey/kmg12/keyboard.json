@@ -52,6 +52,7 @@
             "rainbow_beacon" : true,
             "rainbow_moving_chevron" : true,
             "raindrops" : true,
+            "solid_color": true,
             "solid_reactive_simple" : true,
             "splash" : true,
             "typing_heatmap" : true
@@ -167,8 +168,6 @@
             {"matrix": [3, 17], "flags": 4, "x": 193, "y": 41},
             {"matrix": [3, 18], "flags": 4, "x": 203, "y": 41},
             {"matrix": [3, 19], "flags": 4, "x": 214, "y": 41},
-            // part of right underglow, marked as  DL23 on PCB (part of left underglow) defined on row 4
-            {"matrix": [3, 20], "flags": 2, "x": 224, "y": 41},
 
             // RGB row 5
             //shift and letters
@@ -203,16 +202,8 @@
             {"matrix": [5, 0],  "flags": 5, "x": 1, "y": 64},
             {"matrix": [5, 1],  "flags": 5, "x": 14, "y": 64},
             {"matrix": [5, 2],  "flags": 5, "x": 27, "y": 64},
-            // part of bottom underglow
-            {"matrix": [5, 3],  "flags": 2, "x": 38,   "y": 64}, // DL42
-            {"matrix": [5, 4],  "flags": 2, "x": 46,   "y": 64}, // DL41
-            {"matrix": [5, 5],  "flags": 2, "x": 58,   "y": 64}, // DL40
             // space
             {"matrix": [5, 6],  "flags": 5, "x": 66, "y": 64},
-            // part of bottom underglow
-            {"matrix": [5, 7],  "flags": 2, "x": 73,   "y": 64}, // DL39
-            {"matrix": [5, 8],  "flags": 2, "x": 83,   "y": 64}, // DL38
-            {"matrix": [5, 9],  "flags": 2, "x": 93,   "y": 64}, // DL37
             // alt-fn-menu
             {"matrix": [5, 10], "flags": 5, "x": 105, "y": 64},
             {"matrix": [5, 11], "flags": 5, "x": 119, "y": 64},
@@ -226,9 +217,6 @@
             // 0 canc
             {"matrix": [5, 18], "flags": 4, "x": 198, "y": 64},
             {"matrix": [5, 19], "flags": 4, "x": 214, "y": 64},
-
-            // part of right underglow, marked as  DL24 on PCB (part of left underglow) defined on row 6
-            {"matrix": [5, 20], "flags": 2, "x": 224, "y": 52},
 
             // notes for underglow (matrix is a mess!)
             // row 4 contains 1 underglow at last position (20 marked as DL23 on PCB) used as part of right underglow
@@ -251,6 +239,21 @@
             // right underglow starts with DL21
             // and from top to bottom with DL22, DL23, DL24, DL25
             // it ends with DL26 on bottom left
+
+/* disabled entirely the underglow for further investigation
+
+            // part of right underglow, marked as  DL23 on PCB (part of left underglow) defined on row 4
+            {"matrix": [3, 20], "flags": 2, "x": 224, "y": 41},
+            // part of bottom underglow
+            {"matrix": [5, 3],  "flags": 2, "x": 38,   "y": 64}, // DL42
+            {"matrix": [5, 4],  "flags": 2, "x": 46,   "y": 64}, // DL41
+            {"matrix": [5, 5],  "flags": 2, "x": 58,   "y": 64}, // DL40
+            // part of bottom underglow
+            {"matrix": [5, 7],  "flags": 2, "x": 73,   "y": 64}, // DL39
+            {"matrix": [5, 8],  "flags": 2, "x": 83,   "y": 64}, // DL38
+            {"matrix": [5, 9],  "flags": 2, "x": 93,   "y": 64}, // DL37
+            // part of right underglow, marked as  DL24 on PCB (part of left underglow) defined on row 6
+            {"matrix": [5, 20], "flags": 2, "x": 224, "y": 52},
 
             {"matrix": [6, 0],  "flags": 2, "x": 0,  "y": 0}, // DL1 top-left angle
             {"matrix": [6, 1],  "flags": 2, "x": 224,  "y": 58}, // DL25 (right underglow, just before numpad enter)
@@ -299,6 +302,8 @@
             // part of right underglow
             {"matrix": [7, 19], "flags": 2, "x": 224, "y": 10}, // DL21  (a bit under the top-right angle)
             {"matrix": [7, 20], "flags": 2, "x": 224, "y": 21}, // DL22
+
+            */
         ],
         "react_on_keyup": true,
         "sleep": true
