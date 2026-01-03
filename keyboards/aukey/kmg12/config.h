@@ -18,15 +18,12 @@
 
 #define MATRIX_UNSELECT_DRIVE_HIGH
 
-/* RGB matrix configuration can't be fully expressed in JSON as of now */
-
-//TODO check if required
-//#define LED_MATRIX_ROWS 8
-//#define LED_MATRIX_ROW_CHANNELS 3
-//#define LED_MATRIX_ROWS_HW (LED_MATRIX_ROWS * LED_MATRIX_ROW_CHANNELS)
-
-//#define LED_MATRIX_COLS 21
-//#define LED_MATRIX_COL_PINS MATRIX_COL_PINS
+// not needed
+// #define SN32F2XX_LED_MATRIX_ROWS_HW (SN32F2XX_RGB_MATRIX_ROWS * SN32F2XX_RGB_MATRIX_ROW_CHANNELS)
+// #define SN32F2XX_RGB_MATRIX_ROW_CHANNELS 3
+// #define SN32F2XX_RGB_MATRIX_ROWS 8 // 2 more rows than key matrix (for underglow)
+// #define SN32F2XX_RGB_MATRIX_COLS 21
+// #define SN32F2XX_RGB_MATRIX_COL_PINS MATRIX_COL_PINS
 
 /* Configure the effects:                                              */
 #define RGB_MATRIX_TYPING_HEATMAP_DECREASE_DELAY_MS 50
@@ -43,8 +40,9 @@
     D4,  B15, D3, \
     D5,  A15, D6 \
    }
+
 // note the underglow is mapped partially on row 7 and row 7
-// in keyboard.json i had to map MATRIX_ROW_PINS adding 2 ending 0 in array to be able to use 8 rows => [C15, D11, D10, D9, D8, D7, NO_PIN, NO_PIN ]
+// in keyboard.json i had to map MATRIX_ROW_PINS adding 2 ending 0 in array to be able to use 8 rows =>  "rows": [ "C15", "D11", "D10", "D9",  "D8", "D7", "NO_PIN", "NO_PIN" ]
 
 // this is what i empirically mapped:
 // (r) (g) (b)
@@ -62,6 +60,6 @@
 /* Configure transistor logic for RGB matrix */
 #define SN32F2XX_PWM_OUTPUT_ACTIVE_LEVEL SN32F2XX_PWM_OUTPUT_ACTIVE_HIGH
 #define SN32F2XX_RGB_OUTPUT_ACTIVE_LEVEL SN32F2XX_RGB_OUTPUT_ACTIVE_LOW
-#define SN32F2XX_PWM_DIRECTION ROW2COL
+#define SN32F2XX_PWM_DIRECTION ROW2COL // different from DIODE_DIRECTION which is COL2ROW
 // 105 keys + 50 underglow (1 led in row 4 + 7 led in row 6 + 21 underglow in row 7 and 21 underglow in row 8
 #define RGB_MATRIX_LED_COUNT (155)
